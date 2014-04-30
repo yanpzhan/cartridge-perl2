@@ -101,4 +101,4 @@ then
 fi
 
 touch $(OPENSHIFT_DATA_DIR)/$key
-date > $(OPENSHIFT_DATA_DIR)/$key
+echo 'date' > $(OPENSHIFT_DATA_DIR)/$key
