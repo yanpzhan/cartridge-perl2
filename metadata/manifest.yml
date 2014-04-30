@@ -1,0 +1,69 @@
+---
+Name: perl
+Cartridge-Short-Name: PERL
+Display-Name: Perl 5.10
+Description: Perl is a high-level, general-purpose, interpreted, dynamic programming
+  language. Dynamic content produced by Perl scripts can be served in response to
+  incoming web requests.
+Version: '5.10'
+License: GPL v2
+License-Url: http://dev.perl.org/licenses/
+Vendor: perl.org
+Cartridge-Version: 0.0.15
+Compatible-Versions:
+- 0.0.14
+Cartridge-Vendor: yanpzhan
+Categories:
+- service
+- perl
+- web_framework
+Website: http://www.perl.org
+Help-Topics:
+  Developer Center: https://www.openshift.com/developers
+Provides:
+- perl-5.10
+- perl
+Publishes: 
+Subscribes:
+  set-env:
+    Type: ENV:*
+    Required: false
+  set-doc-url:
+    Type: STRING:urlpath
+    Required: false
+Scaling:
+  Min: 1
+  Max: -1
+Endpoints:
+- Private-IP-Name: IP
+  Private-Port-Name: PORT
+  Private-Port: 8080
+  Public-Port-Name: PROXY_PORT
+- Private-IP-Name:   SSL_IP
+  Private-Port-Name: SSL_PORT
+  Private-Port:      8443
+  Public-Port-Name:  SSL_PROXY_PORT
+  Protocols:
+  - http
+  - ws
+  Options:
+#    ssl_to_gear: true
+    primary: true
+  Mappings:
+  - Frontend: ''
+    Backend: ''
+    Options:
+      websocket: true
+  - Frontend: /health
+    Backend: ''
+    Options:
+      health: true
+
+#Source-Md5: 3507ad852b9afc6d6322e62e49f0e8c0
+#Source-Url: https://github.com/yanpzhan/cartridge-perl2.git
+#Source-Url: https://github.com/xiama/perl2.git
+#Source-Url: https://github.com/xiama/perl2/raw/master/perl.tar
+#Source-Url: https://github.com/xiama/perl2/raw/master/perl2.tar
+#Source-Url: https://github.com/xiama/perl2/raw/master/perl_no_manifest.tar
+Source-Url: https://github.com/yanpzhan/cartridge-perl2/raw/master/perl_no_manifest.tar
+
