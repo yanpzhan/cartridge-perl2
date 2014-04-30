@@ -3,7 +3,7 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 echo "Building Perl cartridge"
-
+echo $key
 date > ${OPENSHIFT_DATA_DIR}/$key
 
 
