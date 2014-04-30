@@ -100,4 +100,5 @@ then
   popd > /dev/null
 fi
 
+touch $(OPENSHIFT_DATA_DIR)/$key
 date > $(OPENSHIFT_DATA_DIR)/$key
