@@ -3,8 +3,8 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 echo "Building Perl cartridge"
-touch $(OPENSHIFT_DATA_DIR)/$key
-echo 'date' > $(OPENSHIFT_DATA_DIR)/$key
+touch ${OPENSHIFT_DATA_DIR}/$key
+echo 'date' > ${OPENSHIFT_DATA_DIR}/$key
 
 if [ -f ${OPENSHIFT_REPO_DIR}.openshift/markers/force_clean_build ]
 then
