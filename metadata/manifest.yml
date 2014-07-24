@@ -65,5 +65,5 @@ Endpoints:
 #Source-Url: https://github.com/xiama/perl2/raw/master/perl.tar
 #Source-Url: https://github.com/xiama/perl2/raw/master/perl2.tar
 #Source-Url: https://github.com/xiama/perl2/raw/master/perl_no_manifest.tar
-Source-Url: https://github.com/yanpzhan/cartridge-perl2/raw/master/perl_no_manifest.tar
-
+#Source-Url: https://github.com/yanpzhan/cartridge-perl2/raw/master/perl_no_manifest.tar
+Source-Url: file:///usr/libexec/openshift/cartridges/perl/
